@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+@*<h3>@ViewBag.Message</h3>*@
+
+<div class="container">
+    <div class="arxiki"><img  src="~/img/turn-on-2923046_1280.jpg"/></div>
+    <div class="row"><h2>@ViewBag.Title.</h2></div>
+
+    <div class="row">
+        <form id="contact-form" method="post" action="contact.php" role="form">
+
+            <div class="messages"></div>
+
+            <div class="controls">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="form_name">Firstname</label>
+                            <input type="text" name="name" class="form-control" placeholder="Firstname" required="required" data-error="Firstname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="form_lastname">Lastname</label>
+                            <input type="text" name="surname" class="form-control" placeholder="Lastname" required="required" data-error="Lastname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="form_email">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="E-mail" required="required" data-error="Valid email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="form_phone">Phone</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="Phonenumber">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="form_message">Message</label>
+                            <textarea name="message" class="form-control" placeholder="Send a message" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <input type="submit" class="btn btn-info btn-send" value="Send message">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
