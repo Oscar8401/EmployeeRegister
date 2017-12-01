@@ -18,18 +18,18 @@ namespace EmployeeRegister.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View(db.Employees.ToList());
+            return View(db.Employees.ToList().Take(10));
         }
 
         //
         public ActionResult Computer()
         {
-            var model = db.Employees.Where(i => i.Department == "IT").ToList();
+            var model = db.Employees.Where(i => i.Department == "IT").Take(10).ToList();
             return View(model);
         }
         public ActionResult Employee()
         {
-            return View(db.Employees.ToList());
+            return View(db.Employees.ToList().Take(10));
         }
 
         // GET: Employees/Details/5
